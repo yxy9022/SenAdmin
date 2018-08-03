@@ -7,9 +7,6 @@
   这是一个用vuejs2.x和element-ui2.x搭建的后台管理项目**进阶版**。
 基于先前的基础版 [LitAdmin](https://github.com/jerry9022/LitAdmin)项目。  
    
-  演示地址：[http://sen.ipyro.cn](http://sen.ipyro.cn)
-   
-   
    相比基础版[LitAdmin](https://github.com/jerry9022/LitAdmin)主要改变如下：
    - 项目结构调整，层次更清晰
    - 增加了vuex状态管理组件，绝大部分操作直接访问action。 
@@ -19,7 +16,13 @@
    - 增加了图库管理功能，仿百度图片(部分功能)。
    - 抽取了截图组件、标签组件
    - 后端使用了nodejs+express+sqlite
-  
+
+   
+  演示地址：[http://sen.ipyro.cn](http://sen.ipyro.cn)  
+  效果图：
+<img src="http://sen.ipyro.cn/image/sample1.jpg" width=540 height=300 />
+<img src="http://sen.ipyro.cn/image/sample2.jpg" width=540 height=300 />
+
     
 ### 项目结构
 ```
