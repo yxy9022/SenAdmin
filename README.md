@@ -7,7 +7,7 @@
   这是一个用vuejs2.x和element-ui2.x搭建的后台管理项目**进阶版**。
 基于先前的基础版 [LitAdmin](https://github.com/jerry9022/LitAdmin)项目。  
    
-  演示地址：[http://sen.ipyro.cn](http://lit.ipyro.cn)
+  演示地址：[http://sen.ipyro.cn](http://sen.ipyro.cn)
    
    
    相比基础版[LitAdmin](https://github.com/jerry9022/LitAdmin)主要改变如下：
