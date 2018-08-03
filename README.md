@@ -19,9 +19,9 @@
 
    
   演示地址：[http://sen.ipyro.cn](http://sen.ipyro.cn)  
-  效果图：
-<img src="https://raw.githubusercontent.com/jerry9022/SenAdmin/master/sample1.jpg" width=540 height=300 />
-<img src="https://raw.githubusercontent.com/jerry9022/SenAdmin/master/sample2.jpg" width=540 height=300 />
+  效果图:  
+  <img src="https://raw.githubusercontent.com/jerry9022/SenAdmin/master/sample1.jpg" width=540 height=300 />  
+  <img src="https://raw.githubusercontent.com/jerry9022/SenAdmin/master/sample2.jpg" width=540 height=300 />
 
     
 ### 项目结构
