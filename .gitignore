@@ -1,0 +1,19 @@
+.DS_Store
+node_modules/
+dist/
+server/data/demo.db
+!server/upload/avatars/.gitkeep
+!server/upload/imgs/.gitkeep
+!server/upload/tmp/.gitkeep
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

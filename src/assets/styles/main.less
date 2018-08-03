@@ -1,0 +1,285 @@
+/* 改变基准色可以改变主题，例如： #3bafda、#52c1bc*/
+@color-base: #3bafda;
+@color-hover: lighten(@color-base, 15%);
+@color-focus: darken(@color-base, 15%);
+
+html, body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-muted {
+  font-size: 12px;
+  color: #8c92a4;
+}
+
+.app-container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.app-header {
+  background-color: @color-base;
+  color: #555;
+  line-height: 50px;
+}
+
+.app-main {
+  padding: 0px;
+  margin: 0px;
+  min-width: 300px;
+  background: #fff;
+  flex: 1;
+  overflow-y: auto;
+  //padding-bottom: 1px;
+}
+
+.btn-long {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.logo {
+  display: inline;
+}
+
+.logo__img {
+  width: 46px;
+  height: 46px;
+  vertical-align: middle;
+}
+
+.logo__text {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  vertical-align: middle;
+}
+
+.myself-menu__item {
+  color: #777;
+  font-size: 14px;
+}
+
+aside {
+  min-width: 50px;
+  max-width: 180px;
+  background: #333744;
+
+  // 折叠切换样式
+  .menu-toggle {
+    background: #4A5064;
+    text-align: center;
+    color: white;
+    height: 26px;
+    line-height: 30px;
+  }
+  .menu-toggle:hover {
+    cursor: pointer;
+    background: lighten(#4A5064, 10%);
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.showSidebar {
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-width: 180px;
+  }
+
+  .el-menu {
+    height: 100%; /*写给不支持calc()的浏览器*/
+    height: -moz-calc(100% - 80px);
+    height: -webkit-calc(100% - 80px);
+    height: calc(100% - 80px);
+    border-radius: 0px;
+    background-color: #333744;
+    border-right: 0px;
+    color: #fff;
+  }
+
+  .el-submenu .el-menu-item {
+    min-width: 50px;
+  }
+
+  .el-menu {
+    width: 180px;
+  }
+  .el-menu--collapse {
+    width: 50px;
+  }
+
+  .el-menu .el-menu-item, .el-submenu .el-submenu__title {
+    height: 46px;
+    line-height: 46px;
+  }
+
+  .el-menu-item:hover, .el-submenu .el-menu-item:hover, .el-submenu__title:hover {
+    background-color: @color-hover;
+  }
+}
+
+.el-menu-item, .el-submenu__title, .el-submenu__title i, .el-menu-item i {
+  color: #fff;
+}
+
+.el-menu .el-menu-item, .el-submenu .el-submenu__title {
+  height: 46px;
+  line-height: 46px;
+}
+
+.el-menu-item:hover, .el-submenu .el-menu-item:hover, .el-submenu__title:hover {
+  background-color: @color-hover;
+}
+
+.el-submenu .el-menu-item, .el-menu--vertical .el-menu--popup {
+  background-color: #333744
+}
+
+.el-submenu .el-menu-item:hover {
+  background-color: #4A5064
+}
+
+.el-submenu .el-menu-item.is-active, .el-menu-item.is-active,
+.el-submenu .el-menu-item.is-active:hover, .el-menu-item.is-active:hover {
+  background-color: @color-base;
+  color: #fff;
+}
+
+.el-menu .iconfont {
+  vertical-align: baseline;
+  margin-right: 6px;
+}
+
+.el-table__expanded-cell[class*=cell] {
+  padding: 10px 15px;
+}
+
+.el-table td, .el-table th {
+  padding: 6px 0;
+}
+
+.el-dialog__footer {
+  text-align: center;
+}
+
+.el-button--main {
+  color: #fff;
+  background-color: #409EFF;
+  border-color: #409EFF;
+}
+
+/***********自定义页面通用样式 start**********************/
+//每个子页面主要布局结构如下
+// page-wrapper -- 最外层容器
+// page-breadcrumb -- 导航容器（可以没有）
+// page-search --搜索栏容器（可以没有）
+// page-main --主内容区
+
+//每个子页面的最外侧容器
+.page-wrapper {
+  padding: 0;
+  margin: 0px;
+  display: block;
+  min-height: 360px;
+}
+
+//导航容器
+.page-breadcrumb {
+  padding: 12px 10px;
+  display: block;
+
+  .under-line {
+    border-bottom: 1px solid #ebeef5;
+  }
+
+  .el-breadcrumb {
+    display: inline-block
+  }
+  .button-back {
+    float: right;
+    display: inline-block;
+
+    .el-button {
+      margin-top: -3px;
+    }
+  }
+}
+
+//搜索区
+.page-search {
+  display: block;
+  padding: 15px;
+  margin: 0px;
+
+  .el-form {
+    padding: 0px;
+
+    .el-form-item {
+      margin: 0px;
+    }
+
+    .el-form-item .el-input {
+      max-width: 480px;
+      min-width: 320px;
+    }
+  }
+}
+
+//主内容区
+.page-main {
+  display: block;
+  margin: auto;
+
+  .el-table th {
+    background-color: #f5f7fa;
+  }
+
+  .content-wrap {
+    padding: 15px;
+  }
+}
+
+/***********自定义页面通用样式 end**********************/
